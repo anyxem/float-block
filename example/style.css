@@ -1,0 +1,40 @@
+body {
+  background-color: #ccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.outer{
+  width: 940px;
+  background-color: #fff;
+}
+
+.outer:after{
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.main {
+  width: 600px;
+  float: left;
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.sidebar{
+  padding: 20px;
+  background-color: #fff;
+  float: left;
+  width: 320px;
+}
+
+
+.floatBox {
+  background-color: #ccc;
+  font-size: 30px;
+  padding: 5px 10px;
+}
