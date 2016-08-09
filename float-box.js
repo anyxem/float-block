@@ -4,19 +4,12 @@
 
   floatBox.init = function(opts){
     var selector = opts.selector || ".floatBox";
-
     var el = d.querySelector(selector);
     addClass(el,'fbx-box');
     var initialBottomStop = null;
     var slides = null;
-
     var data = el.dataset;
-
-    console.log(data);
-
     el.style.width = el.clientWidth + 'px';
-    
-
     var intitalPos = el.offsetTop;
 
     if( data.bottomstop ){
