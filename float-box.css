@@ -5,4 +5,12 @@
 .fbx-box.-fbx-sticky{
   position: fixed;
   top: 0;
+  animation-name: flash;
+  animation-duration: .8s;
+}
+
+
+@keyframes flash {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
