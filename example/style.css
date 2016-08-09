@@ -32,6 +32,13 @@ body {
   width: 320px;
 }
 
+.footer {
+  padding: 20px 20px;
+  background-color: #a0a0a0;
+  color: #fff;
+  clear: both;
+}
+
 
 .floatBox {
   background-color: #ccc;
