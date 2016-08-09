@@ -8,18 +8,28 @@
     var el = d.querySelector(selector);
     addClass(el,'fbx-box');
     var initialBottomStop = null;
+    var slides = null;
 
     var data = el.dataset;
 
     console.log(data);
 
     el.style.width = el.clientWidth + 'px';
-    el.style.height = el.clientHeight + 'px';
+    
 
     var intitalPos = el.offsetTop;
 
     if( data.bottomstop ){
       initialBottomStop = d.querySelector(data.bottomstop).offsetTop - 20;
+    }
+
+    if( data.slides ){
+      slides = el.querySelectorAll('div');
+      console.log(slides);
+      for(var i = 0;i<slides.length;i++){
+        slides[i].style.display = 'none';
+      }
+      slides[0].style.display = 'block';
     }
 
     w.addEventListener('scroll',function(e){
@@ -40,7 +50,27 @@
       }
 
 
+      if(slides){
+        for(var i = 0;i<slides.length;i++){
+          slides[i].style.display = 'none';
+        }
+        if(getScrollPercent() > 50){
+          slides[1].style.display = 'block';
+        }else{
+          slides[0].style.display = 'block';
+        }
+      }
+
+
     });
+
+    function getScrollPercent() {
+        var h = document.documentElement,
+            b = document.body,
+            st = 'scrollTop',
+            sh = 'scrollHeight';
+        return h[st]||b[st] / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+    }
 
     function addClass(el,cls){
       if( el.className.indexOf(cls) == -1 ){
