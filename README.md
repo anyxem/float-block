@@ -17,6 +17,6 @@
 
 ```
 
-** TODO **
+**TODO**
 
 Перейти на requestAnimationFrame
