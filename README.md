@@ -16,3 +16,7 @@
 </div>  
 
 ```
+
+** TODO **
+
+Перейти на requestAnimationFrame
